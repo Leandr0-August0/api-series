@@ -6,10 +6,10 @@ import seriesRoutes from "./routers/seriesRouter.js";
 import userRouter from './routers/userRouter.js';
 
 // INICIANDO A CONEXÃO COM O BANCO DE DADOS DO MONGODB
-const user = "Leandro";
-const pass = "eaKfAatjDCucMlz0";
+const user = "shrekfeliz";
+const pass = "LGqrITANdhi8VC09";
 mongoose.connect(
-    `mongodb+srv://${user}:${pass}@api-the-game.7jjhq.mongodb.net/?retryWrites=true&w=majority&appName=api-the-game`
+    `mongodb+srv://${user}:${pass}@shrek-flix.w2qdu8q.mongodb.net/?retryWrites=true&w=majority&appName=shrek-flix`
 );
 
 app.use(express.urlencoded({ extended: false }));

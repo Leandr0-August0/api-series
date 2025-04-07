@@ -1,0 +1,140 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Series",
+    "collectionId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+    "dateExported": "2025-04-07T21:08:44.628Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "44d817f6-46b8-4ce2-b7f3-7ca79f95794c",
+            "colId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+            "containerId": "",
+            "name": "Cadastrar série",
+            "url": "http://localhost:3000/series",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-03-27T15:05:44.202Z",
+            "modified": "2025-04-07T21:07:39.665Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Stranger Things\",\n  \"description\": {\n    \"genre\": [\n      \"Sci-Fi\",\n      \"Horror\",\n      \"Drama\"\n    ],\n    \"rating\": \"14+\",\n    \"eps\": \"34\",\n    \"year\": 2016\n  }\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjQzZTc3NjY2ZTdmNTlkODE0YTNkNiIsIm5hbWUiOiJhZG0iLCJlbWFpbCI6ImFkbUBnbWFpbC5jb20iLCJpYXQiOjE3NDQwNjAwMzYsImV4cCI6MTc0NDE0NjQzNn0.dA-dNMUyMQAhZK_K__F4jX5oA4AXQL8Ap6-rx7sj-P8"
+            }
+        },
+        {
+            "_id": "c8b95518-9621-4e83-97bd-278cc32c4615",
+            "colId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+            "containerId": "",
+            "name": "Buscar todas as séries",
+            "url": "http://localhost:3000/series",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-03-27T15:19:02.644Z",
+            "modified": "2025-03-28T19:44:04.580Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZTZlMjIxMTkzZTlmNGZmNThhZTRmYSIsIm5hbWUiOiJsZWFuZHJvIiwiZW1haWwiOiJsZWNvQGdtYWlsLmNvbSIsImlhdCI6MTc0MzE5MTAzMiwiZXhwIjoxNzQzMjc3NDMyfQ.IFUDJQDLVIZyg3uLl1vQBO2e558zCrMSYFMBUNhrZz0"
+            }
+        },
+        {
+            "_id": "5118dee5-978b-4cc2-bd27-293f67e0e664",
+            "colId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+            "containerId": "",
+            "name": "Buscar uma série pelo ID",
+            "url": "http://localhost:3000/series/67e6cb4e2e71b0c86da00ed8",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-03-27T15:29:28.494Z",
+            "modified": "2025-03-28T16:17:29.604Z",
+            "headers": []
+        },
+        {
+            "_id": "969f051c-0cc5-4971-aa41-63b862978072",
+            "colId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+            "containerId": "",
+            "name": "Atualizar uma série",
+            "url": "http://localhost:3000/series/67e6db92a5ba048da9162103",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-03-27T15:41:42.301Z",
+            "modified": "2025-03-28T17:26:30.759Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"GOT\",\n  \"description\": {\n    \"genre\": [\n      \"Sci-Fi\",\n      \"Horror\",\n      \"Drama\"\n    ],\n    \"rating\": \"14+\",\n    \"eps\": \"34\",\n    \"year\": 2016\n  }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "127c6fd7-8094-4da3-bec7-bf77705317ac",
+            "colId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+            "containerId": "",
+            "name": "Deletar uma série",
+            "url": "http://localhost:3000/deleteSerie/67e6d902eec4fb315488d92d",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2025-03-27T17:02:45.698Z",
+            "modified": "2025-03-28T17:14:47.627Z",
+            "headers": []
+        },
+        {
+            "_id": "e9d2c020-ccec-44e8-a12b-e86b872bc338",
+            "colId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+            "containerId": "",
+            "name": "Cadastrar muitas séries de uma vez",
+            "url": "http://localhost:3000/series/many",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2025-03-28T16:07:09.300Z",
+            "modified": "2025-03-28T16:16:14.215Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "[\n  {\n    \"title\": \"Stranger Things\",\n    \"description\": {\n      \"genre\": [\"Sci-Fi\", \"Horror\", \"Drama\"],\n      \"rating\": \"14+\",\n      \"eps\": \"34\",\n      \"year\": 2016\n    }\n  },\n  {\n    \"title\": \"Breaking Bad\",\n    \"description\": {\n      \"genre\": [\"Crime\", \"Drama\", \"Thriller\"],\n      \"rating\": \"18+\",\n      \"eps\": \"62\",\n      \"year\": 2008\n    }\n  },\n  {\n    \"title\": \"The Crown\",\n    \"description\": {\n      \"genre\": [\"Drama\", \"History\"],\n      \"rating\": \"16+\",\n      \"eps\": \"40\",\n      \"year\": 2016\n    }\n  },\n  {\n    \"title\": \"Friends\",\n    \"description\": {\n      \"genre\": [\"Comedy\", \"Romance\"],\n      \"rating\": \"12+\",\n      \"eps\": \"236\",\n      \"year\": 1994\n    }\n  },\n  {\n    \"title\": \"The Mandalorian\",\n    \"description\": {\n      \"genre\": [\"Sci-Fi\", \"Adventure\", \"Action\"],\n      \"rating\": \"12+\",\n      \"eps\": \"24\",\n      \"year\": 2019\n    }\n  },\n  {\n    \"title\": \"Black Mirror\",\n    \"description\": {\n      \"genre\": [\"Sci-Fi\", \"Drama\", \"Thriller\"],\n      \"rating\": \"18+\",\n      \"eps\": \"22\",\n      \"year\": 2011\n    }\n  },\n  {\n    \"title\": \"The Witcher\",\n    \"description\": {\n      \"genre\": [\"Adventure\", \"Fantasy\", \"Action\"],\n      \"rating\": \"16+\",\n      \"eps\": \"24\",\n      \"year\": 2019\n    }\n  },\n  {\n    \"title\": \"Narcos\",\n    \"description\": {\n      \"genre\": [\"Crime\", \"Drama\", \"Biography\"],\n      \"rating\": \"18+\",\n      \"eps\": \"30\",\n      \"year\": 2015\n    }\n  },\n  {\n    \"title\": \"The Office (US)\",\n    \"description\": {\n      \"genre\": [\"Comedy\"],\n      \"rating\": \"12+\",\n      \"eps\": \"201\",\n      \"year\": 2005\n    }\n  },\n  {\n    \"title\": \"Game of Thrones\",\n    \"description\": {\n      \"genre\": [\"Fantasy\", \"Drama\", \"Adventure\"],\n      \"rating\": \"18+\",\n      \"eps\": \"73\",\n      \"year\": 2011\n    }\n  },\n  {\n    \"title\": \"Peppa Pig\",\n    \"description\": {\n      \"genre\": [\"Animation\", \"Comedy\", \"Family\"],\n      \"rating\": \"L\",\n      \"eps\": \"300+\",\n      \"year\": 2004\n    }\n  },\n  {\n    \"title\": \"Brooklyn Nine-Nine\",\n    \"description\": {\n      \"genre\": [\"Comedy\", \"Crime\"],\n      \"rating\": \"14+\",\n      \"eps\": \"153\",\n      \"year\": 2013\n    }\n  }\n]",
+                "form": []
+            }
+        },
+        {
+            "_id": "132434c5-37e4-4b7b-ab37-ea68623ab3d5",
+            "colId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+            "containerId": "",
+            "name": "Cadastrar usuário",
+            "url": "http://localhost:3000/newUser",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2025-03-28T17:59:03.210Z",
+            "modified": "2025-04-07T21:07:03.814Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"adm\",\n  \"email\": \"adm@gmail.com\",\n  \"password\": \"123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d67e75de-36f3-418a-bafc-1326fdbb5989",
+            "colId": "ef5fc465-32ff-4eef-8e1c-eff71faf4d54",
+            "containerId": "",
+            "name": "Logar",
+            "url": "http://localhost:3000/login",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2025-03-28T19:24:11.899Z",
+            "modified": "2025-04-07T21:07:16.053Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"adm@gmail.com\",\n  \"password\": \"123\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "pxcA9JGRIrQwnIAAxa-6Qz_ZFUfkeVeuFiEhSl8ob6RdjdbvDf0E5ICEcCDNsJeo0XLJgzz5m_tBMAFKP5lqDA"
+}

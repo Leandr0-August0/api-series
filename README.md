@@ -23,6 +23,139 @@ Exemplo de resposta:
 ```
  
 ## Endpoints
+### - POST /user
+ 
+Esse endpoint é responsável por cadastrar um novo usuário.
+ 
+#### Parâmetros:
+ 
+nome: Nome do usuário.
+ 
+email: Email do usuário.
+ 
+password: Senha do usuário.
+ 
+Exemplo de requisição:
+```
+{
+    "nome": "João Silva",
+    "email": "joao@example.com",
+    "password": "senha123"
+}
+```
+#### Respostas:
+ 
+##### Criado! 201
+ 
+Caso essa resposta aconteça, o usuário foi cadastrado com sucesso.
+ 
+Exemplo de resposta:
+```
+{
+    "message": "Usuário cadastrado com sucesso!"
+}
+```
+
+##### Requisição Ruim! 400
+
+Caso essa resposta aconteça, significa que já existe um usuário cadastrado ou faltam campos a serem preenchidos.
+
+Exemplos de resposta: 
+```
+{
+    "message": "Todos os campos devem ser preenchidos"
+}
+```
+```
+{
+    "message": "Usuário ja cadastrado"
+}
+```
+
+##### Erro Interno do Servidor! 500
+ 
+Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
+ 
+Exemplo de resposta:
+```
+{
+   message: "Erro ao gerar token",
+   error: "Erro interno do servidor"
+}
+```
+ 
+ 
+### - POST /login
+ 
+Esse endpoint é utilizado para realizar o login do usuário
+ 
+#### Parametros:
+email: email do usuário
+ 
+password: senha do usuário
+ 
+Exemplo de requisição:
+ 
+```
+{
+    "email": "leco@gmail.com",
+    "password": "123"
+}
+```
+#### Respostas:
+ 
+##### Ok! 200
+ 
+Caso essa resposta aconteça, significa que o login foi efetuado com sucesso.
+ 
+```
+{
+    "message": "Usuário logado com sucesso!",
+    "token": "<Token do usuário>"
+}
+```
+ 
+##### Requisição Ruim! 400
+ 
+Caso essa resposta aconteça, significa que existem campos que faltam ser preenchidos.
+ 
+```
+{
+    "message": "Todos os campos devem ser preenchidos"
+}
+```
+
+##### Não Autorizado! 401
+ 
+Caso essa resposta aconteça, significa que o usuário errou a senha.
+ 
+```
+{
+    "message": "Senha incorreta"
+}
+```
+
+##### Não Encontrado! 404
+ 
+Caso essa resposta aconteça, significa que nenhum usuário foi encontrado.
+ 
+```
+{
+    "message": "Usuário nao encontrado"
+}
+```
+  
+
+##### Erro Interno no Servidor! 500
+ 
+Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
+ 
+```
+{
+    "message": "Erro ao gerar token",
+    "error": "Erro interno do servidor"
+}
+```
  
 ### - GET /series
  
@@ -333,135 +466,3 @@ Exemplo de resposta:
     "error": "Erro interno do servidor"
 }
 ```
-### - POST /user
- 
-Esse endpoint é responsável por cadastrar um novo usuário.
- 
-#### Parâmetros:
- 
-nome: Nome do usuário.
- 
-email: Email do usuário.
- 
-password: Senha do usuário.
- 
-Exemplo de requisição:
-```
-{
-    "nome": "João Silva",
-    "email": "joao@example.com",
-    "password": "senha123"
-}
-```
-#### Respostas:
- 
-##### Criado! 201
- 
-Caso essa resposta aconteça, o usuário foi cadastrado com sucesso.
- 
-Exemplo de resposta:
-```
-{
-    "message": "Usuário cadastrado com sucesso!"
-}
-```
-
-##### Requisição Ruim! 400
-
-Caso essa resposta aconteça, significa que já existe um usuário cadastrado ou faltam campos a serem preenchidos.
-
-Exemplos de resposta: 
-```
-{
-    "message": "Todos os campos devem ser preenchidos"
-}
-```
-```
-{
-    "message": "Usuário ja cadastrado"
-}
-```
-
-##### Erro Interno do Servidor! 500
- 
-Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
- 
-Exemplo de resposta:
-```
-{
-   message: "Erro ao gerar token",
-   error: "Erro interno do servidor"
-}
-```
- 
- 
-### - POST /login
- 
-Esse endpoint é utilizado para realizar o login do usuário
- 
-#### Parametros:
-email: email do usuário
- 
-password: senha do usuário
- 
-Exemplo de requisição:
- 
-```
-{
-    "email": "leco@gmail.com",
-    "password": "123"
-}
-```
-#### Respostas:
- 
-##### Ok! 200
- 
-Caso essa resposta aconteça, significa que o login foi efetuado com sucesso.
- 
-```
-{
-    "message": "Usuário logado com sucesso!",
-    "token": "<Token do usuário>"
-}
-```
- 
-##### Requisição Ruim! 400
- 
-Caso essa resposta aconteça, significa que existem campos que faltam ser preenchidos.
- 
-```
-{
-    "message": "Todos os campos devem ser preenchidos"
-}
-```
-
-##### Não Autorizado! 401
- 
-Caso essa resposta aconteça, significa que o usuário errou a senha.
- 
-```
-{
-    "message": "Senha incorreta"
-}
-```
-
-##### Não Encontrado! 404
- 
-Caso essa resposta aconteça, significa que nenhum usuário foi encontrado.
- 
-```
-{
-    "message": "Usuário nao encontrado"
-}
-```
-  
-
-##### Erro Interno no Servidor! 500
- 
-Caso essa resposta aconteça, significa que ocorreu um erro interno no servidor.
- 
-```
-{
-    "message": "Erro ao gerar token",
-    "error": "Erro interno do servidor"
-}```
